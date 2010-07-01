@@ -6,8 +6,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME         => 'IO::Socket::RedisPubSub',
     VERSION_FROM => 'lib/IO/Socket/RedisPubSub.pm', # finds \$VERSION
-    AUTHOR       => 'A. U. Thor (a.u.thor@a.galaxy.far.far.away)',
-    ABSTRACT     => '',
+    AUTHOR       => 'Martin Redmond @mpr312',
+    ABSTRACT     => 'Simple redis publish/subscribe client',
     PREREQ_PM    => {
                      'Test::Simple' => 0.44,
                     },

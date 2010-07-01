@@ -5,7 +5,7 @@ use IO::Socket;
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.01';
+    $VERSION     = '0.02';
     @ISA         = qw(Exporter);
     @EXPORT      = qw();
     @EXPORT_OK   = qw(publish subscribe pull);
@@ -84,6 +84,8 @@ sub connect {
   my ( $self, $host, $port ) = @_;
   $self->close;
   $self->{connection} = IO::Socket::INET->new ( PeerAddr => "$host:$port" );
+  return ( undef, undef ) unless $self->{connection} &&
+    $self->{connection}->connected;
   my ( $myport, $myaddr ) = sockaddr_in ( $self->{connection}->sockname );
   return ( inet_ntoa ( $myaddr ), $myport );
 }

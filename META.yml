@@ -1,10 +1,10 @@
 --- #YAML:1.0
 name:                IO-Socket-RedisPubSub
-version:             0.01
-abstract:            
+version:             0.02
+abstract:            Simple redis publish/subscribe client
 license:             ~
 author:              
-    - A. U. Thor (a.u.thor@a.galaxy.far.far.away)
+    - Martin Redmond @mpr312
 generated_by:        ExtUtils::MakeMaker version 6.42
 distribution_type:   module
 requires:     
